@@ -20,6 +20,7 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
+        ViewBag.name = "Nuey Thepyasuwan";
         return View();
     }
 
