@@ -2,6 +2,27 @@
     ViewData["Title"] = "Categories";
 }
 
+@model List<Category>
+
 <div class="text-center">
     <h1 class="display-4">Category List</h1>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <td>
+          Category Name
+        </td>
+        <td>
+          Display Order
+        </td>
+        <tbody>
+          @foreach (var obj in Model.OrderBy(o => o.Name))
+          {
+            <tr>
+              <td>@obj.Name</td>
+              <td>@obj.DisplayOrder</td>
+            </tr>
+          }
+        </tbody>
+      </thead>
+    </table>
 </div>
